@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+    --card: 224 71% 6%;
+    --card-foreground: 213 31% 91%;
+    --primary: 160 84% 39%;
+    --primary-foreground: 0 0% 100%;
+    --muted: 224 71% 10%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 224 71% 12%;
+    --accent-foreground: 213 31% 91%;
+    --border: 224 71% 14%;
+    --ring: 160 84% 39%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Noto Sans', system-ui, sans-serif;
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-muted rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-muted-foreground/50;
+}
+
+/* Markdown content styling */
+.markdown-body {
+  line-height: 1.7;
+}
+.markdown-body h1 { @apply text-2xl font-semibold mt-6 mb-3; }
+.markdown-body h2 { @apply text-xl font-semibold mt-5 mb-2; }
+.markdown-body h3 { @apply text-lg font-medium mt-4 mb-2; }
+.markdown-body p { @apply mb-3; }
+.markdown-body ul, .markdown-body ol { @apply pl-6 mb-3; }
+.markdown-body ul { @apply list-disc; }
+.markdown-body ol { @apply list-decimal; }
+.markdown-body li { @apply mb-1; }
+.markdown-body a { @apply text-primary hover:underline; }
+.markdown-body blockquote {
+  @apply border-l-4 border-primary/40 pl-4 italic text-muted-foreground my-3;
+}
+.markdown-body table {
+  @apply w-full border-collapse my-3;
+}
+.markdown-body th, .markdown-body td {
+  @apply border border-border px-3 py-2 text-left;
+}
+.markdown-body th {
+  @apply bg-muted font-medium;
+}
+.markdown-body code {
+  @apply bg-muted px-1.5 py-0.5 rounded text-sm font-mono;
+}
+.markdown-body pre {
+  @apply bg-[#0d1117] rounded-lg p-4 my-3 overflow-x-auto;
+}
+.markdown-body pre code {
+  @apply bg-transparent p-0 text-foreground;
+}
+.markdown-body hr {
+  @apply border-border my-4;
+}
+
+/* Typing cursor animation */
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+.typing-cursor::after {
+  content: '▋';
+  animation: blink 1s infinite;
+  color: hsl(var(--primary));
+}

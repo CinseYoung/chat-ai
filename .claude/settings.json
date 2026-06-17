@@ -1,0 +1,16 @@
+{
+  "env": {
+    "ANTHROPIC_BASE_URL": "http://1.12.92.8:18000",
+    "ANTHROPIC_AUTH_TOKEN": "aa36338201fbde9294cdbd1843982ccb64419773a9dca148bc8adc398ab716b8@chat-ai-sincecao-1781585078402",
+    "ANTHROPIC_CUSTOM_HEADERS": "",
+    "ENABLE_TOOL_SEARCH": "true",
+    "ANTHROPIC_MODEL": "anthropic.claude-opus-4-7",
+    "CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS": 1,
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": 1,
+    "CLAUDE_CODE_ATTRIBUTION_HEADER": 0
+  },
+  "alwaysThinkingEnabled": true,
+  "permissions": {
+    "defaultMode": "bypassPermissions"
+  }
+}

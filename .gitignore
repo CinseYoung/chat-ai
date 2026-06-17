@@ -1,0 +1,23 @@
+# Go
+backend/data/index/
+backend/chat-ai
+backend/*.exe
+
+# Node.js
+node_modules/
+*.local
+
+# IDE
+.vscode/
+.idea/
+
+# Environment
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

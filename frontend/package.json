@@ -1,0 +1,31 @@
+{
+  "name": "chat-ai-frontend",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.5.13",
+    "markdown-it": "^14.1.0",
+    "highlight.js": "^11.11.1",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^2.5.5",
+    "class-variance-authority": "^0.7.1",
+    "radix-vue": "^1.9.11",
+    "lucide-vue-next": "^0.468.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "typescript": "~5.6.3",
+    "vite": "^5.4.14",
+    "vue-tsc": "^2.2.0",
+    "tailwindcss": "3.4.17",
+    "postcss": "8.5",
+    "autoprefixer": "^10.4.20",
+    "@types/markdown-it": "^14.1.2"
+  }
+}
