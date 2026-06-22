@@ -12,7 +12,7 @@ fi
 
 # 2) 检查必需模型
 for m in qwen3:8b nomic-embed-text; do
-  if ! ollama list 2>/dev/null | awk 'NR>1{print $1}' | grep -qx "$m"; then
+  if ! ollama list 2>/dev/null | awk 'NR>1{print $1}' | grep -q "$m"; then
     echo "[start] 缺少模型 $m,执行: ollama pull $m" >&2
     exit 1
   fi
