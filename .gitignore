@@ -1,15 +1,29 @@
 # Go
 backend/data/index/
 backend/chat-ai
+backend/chat-ai-server
 backend/*.exe
 
 # Node.js
 node_modules/
 *.local
 
-# IDE
+# Frontend build output
+frontend/dist/
+dist/
+
+# TypeScript
+*.tsbuildinfo
+
+# IDE & tools
 .vscode/
 .idea/
+*.swp
+*.swo
+*~
+
+# VS Code Code Runner
+**/tempCodeRunnerFile.*
 
 # Environment
 .env
@@ -21,3 +35,6 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Archive (local build artifacts)
+*.tar.gz

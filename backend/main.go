@@ -69,6 +69,12 @@ func main() {
 	r.POST("/api/ingest", ingest(cfg, store))
 	r.GET("/api/chat/stream", chatStream(cfg, store))
 
+	// 生产部署：serve 前端静态文件
+	r.NoRoute(func(c *gin.Context) {
+		c.File("static/index.html")
+	})
+	r.Static("/assets", "static/assets")
+
 	addr := ":" + cfg.Port
 	log.Printf("[chat-ai] listening on %s | chat=%s embed=%s", addr, cfg.ChatModel, cfg.EmbedModel)
 	if err := r.Run(addr); err != nil {
