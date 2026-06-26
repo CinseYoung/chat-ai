@@ -51,14 +51,8 @@ const quickActions = [
           <Database class="w-8 h-8 text-primary" />
         </div>
         <h1 class="text-3xl font-semibold text-foreground mb-2">
-          Chat AI · RAG Demo
+          Chat AI
         </h1>
-        <p class="text-muted-foreground text-base">
-          本地 Qwen3 + 向量检索,对比"裸 LLM"与"接入 RAG"的回答差异
-        </p>
-        <p class="text-xs text-muted-foreground/60 mt-2">
-          先关 RAG 提问一次,再开 RAG 提同一个问题,看效果差别
-        </p>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -86,9 +80,6 @@ const quickActions = [
         </button>
       </div>
 
-      <p class="mt-8 text-xs text-muted-foreground/40">
-        所有数据在本地处理,不会上传到云端
-      </p>
     </div>
   </div>
 </template>

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import ChatLayout from './components/ChatLayout.vue'
+import { generateId } from './lib/utils'
 
 const isSidebarOpen = ref(true)
 
@@ -35,7 +36,7 @@ const activeSession = computed(() =>
 
 function createNewSession() {
   const session: Session = {
-    id: crypto.randomUUID(),
+    id: generateId(),
     title: '新对话',
     messages: [],
     createdAt: new Date(),

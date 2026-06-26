@@ -1,4 +1,5 @@
 import { ref, reactive } from 'vue'
+import { generateId } from '../lib/utils'
 
 // useChat 只关心 session.messages.push() 的能力,定义一个最小契约。
 interface ChatSession {
@@ -39,13 +40,13 @@ export function useChat() {
     isLoading.value = true
 
     session.messages.push({
-      id: crypto.randomUUID(),
+      id: generateId(),
       role: 'user',
       content: message,
     })
 
     const assistantMsg = reactive({
-      id: crypto.randomUUID(),
+      id: generateId(),
       role: 'assistant' as const,
       content: '',
       isStreaming: true,

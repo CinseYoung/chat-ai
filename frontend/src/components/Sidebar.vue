@@ -108,7 +108,7 @@ import { computed } from 'vue'
     <!-- Footer -->
     <div class="p-3 border-t border-border">
       <div class="text-xs text-muted-foreground/50 text-center">
-        Chat AI · RAG Demo · Qwen3 + chromem-go
+        Qwen3 + chromem-go
       </div>
     </div>
   </aside>

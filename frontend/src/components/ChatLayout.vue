@@ -103,7 +103,7 @@ function handleQuickAction(text: string) {
           <div class="flex items-center gap-2">
             <Bot class="w-5 h-5 text-primary" />
             <span class="font-semibold text-foreground">Qwen3</span>
-            <span class="text-xs text-muted-foreground">+ RAG demo</span>
+            <span class="text-xs text-muted-foreground">+ RAG</span>
           </div>
         </div>
         <div class="flex items-center gap-2">
